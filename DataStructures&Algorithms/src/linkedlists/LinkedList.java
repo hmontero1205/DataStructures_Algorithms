@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class LinkedList {
 	//private ArrayList<Node> list;
 	public Node head;
+	public int size;
 	
 	public LinkedList(){
 		//this.list = new ArrayList<Node>();
@@ -19,6 +20,7 @@ public class LinkedList {
 			newNode.next=head;
 		}
 		head = newNode;
+		size++;
 		//list.add(0,head);
 	}
 	public Node deletion(){
@@ -27,6 +29,7 @@ public class LinkedList {
 		else{
 			Node toRemove = head;
 			head = head.next;
+			size--;
 			return toRemove;
 			//return list.remove(0);
 		}
@@ -67,6 +70,7 @@ public class LinkedList {
 					if(current.key.equals(k)){
 						Node toDelete = current;
 						prev.next=toDelete.next;
+						size--;
 						return toDelete;
 					}
 					prev=current;

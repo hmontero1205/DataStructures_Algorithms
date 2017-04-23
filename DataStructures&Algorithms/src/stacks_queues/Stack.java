@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Stack {
 	public int maxLength;
+	private int top;
+	
 	private ArrayList<String> list;
 	
 	public Stack(int l){
@@ -12,11 +14,11 @@ public class Stack {
 	}
 	
 	public void push(String s){
-		if(!isFull()){
-			list.add(0,s);
+		if(isFull()){
+			System.out.println("Chill max length reached dude");
 		}
 		else{
-			System.out.println("Chill max length reached dude");
+			list.add(top,s);
 		}
 	}
 	
@@ -26,7 +28,7 @@ public class Stack {
 			return null;
 		}
 		else
-			return list.remove(0);
+			return list.remove(top);
 	}
 	
 	public String peek(){
@@ -35,7 +37,7 @@ public class Stack {
 			return null;
 		}
 		else
-			return list.get(0);
+			return list.get(top);
 	}
 
 	public boolean isFull(){

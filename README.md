@@ -1,1 +1,2 @@
-# DataStructures_Algorithms
+# Data Structures Algorithms
+I'm trying to teach myself some data structures and algorithms. We'll see how it goes...
